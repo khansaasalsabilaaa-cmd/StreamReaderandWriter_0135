@@ -13,5 +13,11 @@ int main()
     cout << "Masukkan nama file : ";
     cin >> NamaFile;
 
-    
+    //membuat file dalam mode menulis
+    ofstream outfile;
+    //menunjuk ke sebuah nama file dengan ekstentsi txt
+    outfile.open("D:\\PEMDAS 2026\\Pertemuan14\\" + NamaFile + ".txt", ios::out);
+
+    cout << ">= Menulis file, \ 'q\' untuk keluar" << endl;
+
 }
