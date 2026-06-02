@@ -29,5 +29,8 @@ int main()
         outfile << baris << endl;
 
     }
+    //menutup file setelah penulisam selesai
+    outfile.close();
+
     
 }
