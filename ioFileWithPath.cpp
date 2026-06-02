@@ -30,7 +30,7 @@ int main()
         //kondisi jika baris hanya berisi huruf q
         if (baris == "q") break;
         //menulis dan memasukkan nilai dari bari ke dalam file
-        oufile << baris << endl;
+        outfile << baris << endl;
 
     }
     //menutup file apabila telah selesai di tulis
@@ -42,5 +42,19 @@ int main()
     //menunjuk ke sebuah file dengan ekstensi .txt
     infile.open("D:\\PEMDAS 2026\\Pertemuan14\\" + NamaFile + ".txt", ios::in);
 
-    
+    cout << endl << ">= Membuka dan membaca file" << endl;
+    //kondisi jika file ada
+    if (infile.is_open())
+    {
+        //perulangan untuk menampilkan setiap baris
+        while (getline(infile, baris))
+        {
+            cout << baris << endl;
+        }
+        //menutup file jika telah selesai di loop
+        infile.close();
+    }
+    //kondisi jika file tidak ada
+    else cout << "Unable to open file";
+    return 0;
 }
