@@ -38,5 +38,9 @@ int main()
 
     //membuka file dalam mode membaca
     ifstream infile;
+
+    //menunjuk ke sebuah file dengan ekstensi .txt
+    infile.open("D:\\PEMDAS 2026\\Pertemuan14\\" + NamaFile + ".txt", ios::in);
+
     
 }
